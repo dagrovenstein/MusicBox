@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal">
+
+    <TextView
+        android:text="Music Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView8"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:fontFamily="casual" />
+
+    <TextView
+        android:text="Artist: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:id="@+id/artistTv"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Song: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/songTv"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/artistTv"
+        android:layout_alignLeft="@+id/artistTv"
+        android:layout_alignStart="@+id/artistTv" />
+
+    <TextView
+        android:text="Votes: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/votesTv"
+        android:layout_below="@+id/songTv"
+        android:layout_alignLeft="@+id/songTv"
+        android:layout_alignStart="@+id/songTv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/trackUriTv"
+        android:layout_below="@+id/votesTv"
+        android:layout_alignLeft="@+id/votesTv"
+        android:layout_alignStart="@+id/votesTv" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:background="@android:drawable/ic_media_next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:onClick="nextSongHost" />
+
+    <ImageView
+        app:srcCompat="@android:color/transparent"
+        android:id="@+id/albumCoverImg"
+        android:layout_below="@+id/trackUriTv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp" />
+
+</RelativeLayout>

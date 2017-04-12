@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal">
+
+    <TextView
+        android:text="Music Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView13"
+        android:fontFamily="casual"
+        android:textSize="28sp"
+        tools:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Artist: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/artistTv"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Song: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/songTv"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/artistTv"
+        android:layout_alignLeft="@+id/artistTv"
+        android:layout_alignStart="@+id/artistTv" />
+
+    <TextView
+        android:text="Votes: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songTv"
+        android:layout_alignLeft="@+id/songTv"
+        android:layout_alignStart="@+id/songTv"
+        android:layout_marginTop="12dp"
+        android:id="@+id/votesTv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/votesTv"
+        android:layout_alignLeft="@+id/votesTv"
+        android:layout_alignStart="@+id/votesTv"
+        android:layout_marginTop="11dp"
+        android:id="@+id/trackUriTv" />
+
+    <Button
+        android:layout_height="25dp"
+        android:id="@+id/button14"
+        android:layout_above="@+id/trackUriTv"
+        android:layout_toLeftOf="@+id/textView13"
+        android:layout_toRightOf="@+id/votesTv"
+        android:layout_toStartOf="@+id/textView13"
+        android:background="@mipmap/upvote"
+        android:layout_width="27dp"
+        android:onClick="upvoteEvent" />
+
+    <Button
+        android:layout_height="25dp"
+        android:id="@+id/button15"
+        android:background="@mipmap/downvote"
+        android:layout_above="@+id/trackUriTv"
+        android:layout_alignLeft="@+id/button5"
+        android:layout_alignStart="@+id/button5"
+        android:layout_width="27dp"
+        android:onClick="downvoteEvent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:id="@+id/button5"
+        android:background="@android:drawable/ic_media_next"
+        android:onClick="nextSongGuest"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        app:srcCompat="@android:color/transparent"
+        android:id="@+id/albumCoverImg"
+        android:layout_below="@+id/trackUriTv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp" />
+
+</RelativeLayout>

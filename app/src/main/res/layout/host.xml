@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.armstrong.fakefestify.MainActivity"
+    android:background="?attr/colorButtonNormal">
+
+    <Button
+        android:text="Start Party!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/startPartyBtn"
+        android:layout_alignBottom="@+id/startPartyBtn"
+        android:layout_alignLeft="@+id/startPartyBtn" />
+
+    <Button
+        android:text="Start Party!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/startPartyBtn"
+        android:layout_alignBottom="@+id/startPartyBtn"
+        android:layout_alignLeft="@+id/startPartyBtn" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/dropdown"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/create"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Music Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:fontFamily="casual"
+        android:typeface="normal"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Start Party!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:id="@+id/startPartyBtn"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/switch3"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:text="Allow Paid Options "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:text="Allow Song Adding "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/switch1"
+        android:layout_alignLeft="@+id/switch1" />
+
+    <Switch
+        android:text="Apply Filters "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch3"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/switch2"
+        android:layout_alignRight="@+id/switch2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="49dp"
+        android:textAlignment="center"
+        android:singleLine="true"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/button7"
+        android:hint="Enter Party Name" />
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmBtn"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/switch1"
+        android:layout_toRightOf="@+id/switch1"
+        android:onClick="onConfirmClick" />
+
+    <TextView
+        android:text="          "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorTV"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+</RelativeLayout>

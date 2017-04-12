@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3" // Note: this version should match the latest build-tools version
+                               // that you installed in the SDK manager
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    defaultConfig {
+        applicationId "edu.armstrong.fakefestify"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    
+    // This library handles authentication and authorization
+    compile(name: 'spotify-auth-beta23-noconnect-2.20b', ext: 'aar')
+    
+    // This library handles music playback
+    compile(name: 'spotify-player-beta23-noconnect-2.20b', ext: 'aar')
+    
+    // All other dependencies for your app should also be here:
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+}
